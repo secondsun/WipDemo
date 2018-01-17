@@ -2,6 +2,7 @@ package org.feedhenry.mcp.prdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,6 +19,8 @@ import org.aerogear.mobile.core.configuration.ServiceConfiguration;
 public class MainActivity extends AppCompatActivity {
 
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private RedditModule reddit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +30,15 @@ public class MainActivity extends AppCompatActivity {
         TextView configTextView = findViewById(R.id.configText);
 
         ServiceModuleRegistry registry = new ServiceModuleRegistry();
-        registry.registerServiceModule("fh-sync-server", LocalTestServiceModule.class);
-        registry.registerServiceModule("keycloak", LocalTestServiceModule.class);
-        registry.registerServiceModule("prometheus", LocalTestServiceModule.class);
-        registry.registerServiceModule("unified-push-server", LocalTestServiceModule.class);
+        registry.registerServiceModule("reddit", RedditModule.class, "http");
 
 
         MobileCore core = new MobileCore.Builder(this.getApplicationContext())
                                             .setRegistryService(registry)
                                             .setMobileServiceFileName("mobile-core.json")
                                             .build();
+
+        reddit = (RedditModule) core.getService("reddit");
 
         serviceSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, core.getServiceNames()));
         serviceSpinner.setOnItemSelectedListener(
@@ -56,5 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 }
 );
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("REDDIT",new Gson().toJson(reddit.getFrontPage()));
     }
 }
