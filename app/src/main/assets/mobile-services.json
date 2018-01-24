@@ -1,0 +1,34 @@
+{
+  "services": [
+    {
+      "config": {
+        "auth-server-url": "http://keycloak-myproject.192.168.37.1.nip.io/auth",
+        "clientId": "EZcUrellnlHPFUIYpuvT",
+        "headers": {},
+        "realm": "myproject",
+        "resource": "EZcUrellnlHPFUIYpuvT",
+        "ssl-required": "external",
+        "url": "http://keycloak-myproject.192.168.37.1.nip.io/auth"
+      },
+      "name": "keycloak"
+    },
+    {
+      "config": {
+        "headers": {
+          "User-Agent": "AeroGear Android Core"
+        },
+        "url": "http://http-myproject.192.168.37.1.nip.io"
+      },
+      "name": "http"
+    },
+    {
+      "config": {
+        "headers": {
+        },
+        "uri": "http://10.0.2.2:8080"
+      },
+      "name": "echo-service"
+    }
+  ],
+  "namespace": "myproject"
+}
