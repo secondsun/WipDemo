@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.aerogear.mobile.core.MobileCore;
 import org.aerogear.mobile.core.configuration.ServiceConfiguration;
 
 public class ViewConfigActivity extends CoreActivity {
@@ -24,15 +25,15 @@ public class ViewConfigActivity extends CoreActivity {
         TextView configTextView = findViewById(R.id.configText);
 
         //Load values from core
-//        serviceSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, core.getServiceNames()));
+        String[] names  = new String[]{"keycloak","echo-service"};
+        serviceSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, names));
         serviceSpinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         //Load values from core
-//                        String serviceName = core.getServiceNames().get(position);
-//                        ServiceConfiguration config = core.getConfig(serviceName);
-//                        configTextView.setText(gson.toJson(config));
+                        ServiceConfiguration config = core.getConfig(names[position]);
+                        configTextView.setText(gson.toJson(config));
                     }
 
                     @Override
