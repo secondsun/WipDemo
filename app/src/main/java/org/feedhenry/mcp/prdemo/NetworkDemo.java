@@ -46,8 +46,8 @@ public class NetworkDemo extends CoreActivity {
         setContentView(R.layout.activity_network_demo);
         bindViews();
 
-        keycloak = (KeyCloakService) core.getService("keycloak");
-        echoService = (EchoServiceModule) core.getService("echo-service");
+        keycloak = KeyCloakService.getInstance(this);
+        echoService = new EchoServiceModule(this);
     }
 
     private void bindViews() {
@@ -74,8 +74,6 @@ public class NetworkDemo extends CoreActivity {
         secureEcho.setOnClickListener((view)->{
             echoService.echoSecure(output);
         });
-
-
     }
 
     private void startExchange() {

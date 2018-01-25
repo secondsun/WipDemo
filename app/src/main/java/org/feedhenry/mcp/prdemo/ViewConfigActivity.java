@@ -14,9 +14,7 @@ import org.aerogear.mobile.core.configuration.ServiceConfiguration;
 
 public class ViewConfigActivity extends CoreActivity {
 
-
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +24,15 @@ public class ViewConfigActivity extends CoreActivity {
         TextView configTextView = findViewById(R.id.configText);
 
         //Load values from core
-        serviceSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, core.getServiceNames()));
+//        serviceSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, core.getServiceNames()));
         serviceSpinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         //Load values from core
-                        String serviceName = core.getServiceNames().get(position);
-                        ServiceConfiguration config = core.getConfig(serviceName);
-                        configTextView.setText(gson.toJson(config));
+//                        String serviceName = core.getServiceNames().get(position);
+//                        ServiceConfiguration config = core.getConfig(serviceName);
+//                        configTextView.setText(gson.toJson(config));
                     }
 
                     @Override
