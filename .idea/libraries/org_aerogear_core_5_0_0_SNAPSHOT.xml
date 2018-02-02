@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="org.aerogear:core-5.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-5.0.0-SNAPSHOT.aar/804555dbd2491d3c9e8d71f0743d934d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-5.0.0-SNAPSHOT.aar/804555dbd2491d3c9e8d71f0743d934d/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/org/aerogear/core/5.0.0-SNAPSHOT/core-5.0.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/org/aerogear/core/5.0.0-SNAPSHOT/core-5.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
