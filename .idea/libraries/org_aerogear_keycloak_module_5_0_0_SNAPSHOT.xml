@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="org.aerogear:keycloak-module-5.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/keycloak-module-5.0.0-SNAPSHOT.aar/d7596c8674b4751347a9efc62ee9b81c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/keycloak-module-5.0.0-SNAPSHOT.aar/d7596c8674b4751347a9efc62ee9b81c/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/org/aerogear/keycloak-module/5.0.0-SNAPSHOT/keycloak-module-5.0.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/org/aerogear/keycloak-module/5.0.0-SNAPSHOT/keycloak-module-5.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

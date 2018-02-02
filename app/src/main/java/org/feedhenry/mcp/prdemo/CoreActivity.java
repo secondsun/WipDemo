@@ -8,12 +8,10 @@ import org.aerogear.mobile.core.MobileCore;
 
 public abstract class CoreActivity extends AppCompatActivity {
 
-    protected MobileCore core;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.core = MobileCore.getInstance(this);
+        MobileCore.init(this);
     }
 
 }

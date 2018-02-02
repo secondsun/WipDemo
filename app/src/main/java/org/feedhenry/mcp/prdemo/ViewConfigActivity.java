@@ -32,7 +32,7 @@ public class ViewConfigActivity extends CoreActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         //Load values from core
-                        ServiceConfiguration config = core.getConfig(names[position]);
+                        ServiceConfiguration config = MobileCore.getServiceConfiguration(names[position]);
                         configTextView.setText(gson.toJson(config));
                     }
 

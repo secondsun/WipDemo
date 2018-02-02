@@ -38,7 +38,7 @@ public class NetworkDemo extends CoreActivity {
         setContentView(R.layout.activity_network_demo);
         bindViews();
 
-        keycloak = KeyCloakService.getInstance(this);
+        keycloak = KeyCloakService.create();
         echoService = new EchoServiceModule(this);
     }
 

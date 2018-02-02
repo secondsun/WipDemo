@@ -26,9 +26,9 @@ public class EchoServiceModule implements ServiceModule {
     private String url;
 
     public EchoServiceModule(Context context) {
-        this.keycloak = KeyCloakService.getInstance(context);
-        this.http = OkHttpServiceModule.getInstance(context);
-        this.url = MobileCore.getInstance(context).getConfig("echo-service").getUri();
+//        this.keycloak = KeyCloakService.getInstance(context);
+//        this.http = OkHttpServiceModule.getInstance(context);
+//        this.url = MobileCore.getInstance(context).getConfig("echo-service").getUri();
     }
 
     public void echoInsecure(TextView output) {
